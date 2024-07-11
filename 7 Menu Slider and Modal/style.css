@@ -1,0 +1,203 @@
+*{
+    box-sizing: border-box;
+}
+
+/* Styling Main Body */
+body{
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    transition: transform 0.3s ease-in-out;     /* We will move the body to the right to accomodate the nav bar */
+}
+
+body.show{      /* We will add the show class via JS to the body and when the class is added, body */    
+    transform: translateX(250px);           /* will translate 250px towards x */
+}
+
+.nav-btn{
+    position: absolute;
+    top: 22px;
+    left: 22px;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.top-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    margin-bottom: 15px;
+    background-color: #30336b;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+}
+
+h1{
+    margin: 10px 0;
+}
+
+.signup{
+    margin: 10px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: #be2edd;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.middle-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p{
+    padding: 0 0;    
+}
+
+.content{
+    width: 800px;
+    padding: 10px;
+}
+
+h2{
+    margin: 5px;    
+}
+
+/* Styling Nav Bar */
+nav{
+    position: fixed;    /* Nav bar is fixed to the body */
+    top: 0;
+    left: -250px;
+    width: 250px;       /* Nav Bar's width is 250px and it is positioned to -250px left so it is hidden */
+    height: 100vh;      /* normally but when body is translated to 250px towards x */
+    z-index: 100;
+    background-color: #30336b;
+}
+
+.image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+img{
+    border-radius: 50%;
+    height: 80px;
+}
+
+nav ul{
+    list-style-type: none;
+    padding-left: 0px;
+    margin: 0;
+}
+
+nav li{
+    padding: 20px 15px;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+/* Styling Modal */
+.modal-container{
+    position: absolute;     /* This takes the entire browser window . It is wrt body */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;      /* Here the display will be changed to flex, so we added align-items and */
+    align-items: center;        /* justify-content to bring the modal to the centre of the page */
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+}
+    
+.heading{
+    width: 400px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #30336b;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.close{
+    cursor: pointer;
+}
+
+.body{
+    width: 400px;
+    background-color: #fff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.body p{
+    padding: 0 20px;
+    margin-top: 40px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+.form-elements{
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#submit{
+    margin: auto;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #be2edd;
+    color: #fff;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Media Query */
+@media (max-width: 800px) {
+    .content{
+        width: 95%;
+    }
+}

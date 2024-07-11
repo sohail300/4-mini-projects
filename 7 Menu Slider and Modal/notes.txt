@@ -1,0 +1,12 @@
+
+CSS
+transition: transform 0.3s ease-in-out;
+transform: translateX(250px);
+border-radius: 50%;     // To make any image round
+violet color: #be2edd;
+
+
+JS Script
+To make anything disappear and appear
+modalContainer.style.display='flex';
+modalContainer.style.display='none';

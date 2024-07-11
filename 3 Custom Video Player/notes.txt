@@ -1,0 +1,22 @@
+used video tag --> See eventListeners, methods and functions associated with it.
+if(video.paused){
+    video.play();
+} else{
+    video.pause();
+}
+
+video.currentTime=0
+video.duration
+
+addEventListener
+click
+play
+pause
+timeupdate
+
+input range tag
+<i class="fa fa-play fa-2x"></i>
+
+CSS
+!important
+outline
